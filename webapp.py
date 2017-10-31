@@ -5,8 +5,10 @@ app = Flask(__name__) #__name__ = "__main__" if this is the file that was run.  
 
 def get_state_options(counties):
   options = str( " ")
-  for c in counties
-    if 
+  for s in counties:
+    if s not in counties:
+      options+=s
+      options+=Markup
   
 
 @app.route("/")
