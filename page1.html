@@ -3,16 +3,8 @@
 <body>
 
 <form action="/action_page.php">
-  <input list="counties" name="county">
-  <datalist id="counties">
-    {% block content %}{% endblock %}
-  </datalist>
-  <input type="submit">
-</form>
+  {% block option %}
   <p>   {% block content %}{% endblock %} </p>
-  
-  
-  
   
   </body>
 </html>
