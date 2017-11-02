@@ -6,12 +6,16 @@ app = Flask(__name__) #__name__ = "__main__" if this is the file that was run.  
 
 
 def get_state_options(counties):
+  states = []
+    for c in counties:
+        if c["State"] not in states:
+            states.append(c["State"])
+        
   options = str( " ")
-  for s in counties:
-    if s not in counties:
-      options+=s
-      options+=Markup
-  
+    if s not in states:
+      options+=Markup("<option value=\"" + s + "\">" + s + "</option>")
+def fun_fact(states):
+   
 
 @app.route("/")
 def render_main():
