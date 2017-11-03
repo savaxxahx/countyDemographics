@@ -12,8 +12,9 @@ def get_state_options(counties):
             states.append(c["State"])
             
      options = Str("")
-    for s in states
-    return options+=Markup("<option value=\"" + s + "\">" + s + "</option>")
+    for s in states:
+       options+=Markup("<option value=\"" + s + "\">" + s + "</option>")
+    return options
 def fun_fact(states):
    
 
