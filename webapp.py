@@ -13,13 +13,13 @@ def get_state_options(counties):
         
   options = str( " ")
     if s not in states:
-      options+=Markup("<option value=\"" + s + "\">" + s + "</option>")
+       return options+=Markup("<option value=\"" + s + "\">" + s + "</option>")
 def fun_fact(states):
    
 
 @app.route("/")
 def render_main():
-    return render_template('page1.html')
+    return render_template('page1.html', )
 
 
 if __name__=="__main__":
