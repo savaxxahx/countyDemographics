@@ -2,8 +2,12 @@
 <html>
 <body>
 
-<form action="/action_page.php">
+<form action="/action_page.php">\
+  <select name="states">
   {{options}}
+   </select>
+  <br><br>
+  <input type="submit">
   <p>   {% block content %}{% endblock %} </p>
   
   </body>
