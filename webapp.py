@@ -12,7 +12,7 @@ def get_state_options(counties):
             states.append(c["State"])
             
      options = Str("")
-       if s not in states:
+    for s in states
     return options+=Markup("<option value=\"" + s + "\">" + s + "</option>")
 def fun_fact(states):
    
