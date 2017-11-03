@@ -19,7 +19,7 @@ def fun_fact(states):
 
 @app.route("/")
 def render_main():
-    return render_template('page1.html', )
+    return render_template('page1.html', options = get_state_options(counties))
 
 
 if __name__=="__main__":
