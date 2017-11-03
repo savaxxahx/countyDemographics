@@ -22,7 +22,7 @@ def fun_fact(states):"""
 def render_main():
     """with open('county_demographics.json') as demographics_data:
         counties = json.load(demographics_data)"""
-    return render_template('page1.html', options = str(" "))
+    return render_template('page1.html', states = str(" "))
 
 
 if __name__=="__main__":
