@@ -22,7 +22,7 @@ def get_state_options(counties):
 def render_main():
    with open('county_demographics.json') as demographics_data:
         counties = json.load(demographics_data)
-    return render_template('page1.html', states = get_state_options(counties))
+    return render_template('page1.html', states = options)
 
 
 if __name__=="__main__":
