@@ -6,6 +6,8 @@ app = Flask(__name__) #__name__ = "__main__" if this is the file that was run.  
 
 
 def get_state_options(counties):
+  with open('county_demographics.json') as demographics_data:
+        counties = json.load(demographics_data)
   states = []
     for c in counties:
         if c["State"] not in states:
@@ -20,9 +22,9 @@ def get_state_options(counties):
 
 @app.route("/")
 def render_main():
-   with open('county_demographics.json') as demographics_data:
-        counties = json.load(demographics_data)
-    return render_template('page1.html', states = options)
+   """with open('county_demographics.json') as demographics_data:
+        counties = json.load(demographics_data)"""
+    return render_template('page1.html', states = get_state_options(counties))
 
 
 if __name__=="__main__":
