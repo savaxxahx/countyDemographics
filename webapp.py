@@ -13,7 +13,7 @@ def get_state_options(counties):
             
   options = Str("")
     for s in states:
-       options+=Markup("<option value=\"" + s + "\">" + s + "</option>")
+       options+=Markup
     return options
 
    
