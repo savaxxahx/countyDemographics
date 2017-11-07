@@ -24,7 +24,12 @@ def get_state_options():
       options+=Markup("<option value=\"" + s + "\">" + s + "</option>")
   return options
 
-   
+def fun_Fact():
+  with open('county_demographics.json') as demographics_data:
+      counties = json.load(demographics_data)
+        
+  w
+    
 
 
 if __name__=="__main__":
