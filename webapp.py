@@ -15,14 +15,14 @@ def render_main():
 
 def get_state_options(counties):
   states = []
-    for c in counties:
-        if c["State"] not in states:
-            states.append(c["State"])
+  for c in counties:
+      if c["State"] not in states:
+          states.append(c["State"])
             
   options = Str("")
-    for s in states:
-       options+=Markup("<option value=\"" + s + "\">" + s + "</option>")
-    return options
+  for s in states:
+      options+=Markup("<option value=\"" + s + "\">" + s + "</option>")
+  return options
 
    
 
