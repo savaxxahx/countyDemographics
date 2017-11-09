@@ -11,7 +11,7 @@ def render_main():
     return render_template('page1.html', states = get_state_options())
                            
 
-@app.route("/")
+@app.route("/answer")
 def render_main():
     if states in request.args:
     return render_template('page1.html' , funFact = fun_Fact(request.args['states'])
