@@ -31,11 +31,13 @@ def fun_fact(state):
     with open('county_demographics.json') as demographics_data:
         counties = json.load(demographics_data)
     first = counties[0]["Miscellaneous"]["Percent Female"]
+    x = counties[0]["County"]
     for c in counties:
         if c["State"] == state:
             if c["Miscellaneous"]["Percent Female"]> first:
                 first =c["Miscellaneous"]["Percent Female"]
-    return str(first)                 
+                x=c["County"]
+    return str("In") + " " + x+ " " + str(first) + " " + str(" of the population is female")                
 
     
 
