@@ -13,7 +13,7 @@ def render_main():
 
 @app.route("/answer")
 def render_secondtime():
-    return render_template('page1.html' , states = get_state_options(), funFact = fun_fact(request.args['states'])
+    return render_template('page1.html' , states = get_state_options(), funFact = fun_fact(str("AL"))
 
 def get_state_options():
   with open('county_demographics.json') as demographics_data:
