@@ -36,7 +36,7 @@ def get_state_options():
       if c["counties"] in state:
          if c["Miscellaneous"]["Percent Female"]> first:
             first =c["Miscellaneous"]["Percent Female"]"""
-    return str("why")"""                 
+    """return str("why")"""                 
    
     
 
