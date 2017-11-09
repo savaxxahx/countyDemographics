@@ -11,7 +11,7 @@ def render_main():
     return render_template('page1.html', states= get_state_options())
 @app.route("/answer")
 def render_secondtime():
-    return render_template('page1.html' , states = get_state_options(), funFact= fun_fact("CA"))
+    return render_template('page1.html' , states = get_state_options(), funFact= fun_fact(request.args["states"]))
                            
 def get_state_options():
     with open('county_demographics.json') as demographics_data:
@@ -37,7 +37,7 @@ def fun_fact(state):
             if c["Miscellaneous"]["Percent Female"]> first:
                 first =c["Miscellaneous"]["Percent Female"]
                 x=c["County"]
-    return str("In") + " " + x+ " " + str(first) + " " + str(" of the population is female")                
+    return str("In") + " " + x+ " " + str(first) + " " + str(" of the population is female.")                
 
     
 
