@@ -28,7 +28,7 @@ def get_state_options():
       options+=Markup("<option value=\"" + s + "\">" + s + "</option>")
   return options
 
-def fun_fact(state):
+"""def fun_fact(state):
     with open('county_demographics.json') as demographics_data:
         counties = json.load(demographics_data)
     first = counties[0]["Miscellaneous"]["Percent Female"]
@@ -36,7 +36,7 @@ def fun_fact(state):
       if c["counties"] in state:
          if c["Miscellaneous"]["Percent Female"]> first:
             first =c["Miscellaneous"]["Percent Female"]"""
-    return str("why")                   
+    return str("why")"""                 
    
     
 
