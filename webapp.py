@@ -13,7 +13,6 @@ def render_main():
 
 @app.route("/answer")
 def render_main():
-    if states in request.args:
     return render_template('page1.html' , funFact = fun_Fact(request.args['states'])
 
 def get_state_options():
