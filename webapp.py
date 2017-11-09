@@ -16,17 +16,17 @@ def render_secondtime():
     return render_template('page1.html' , states = get_state_options(), funFact = fun_fact(str("AL"))"""
 
 def get_state_options():
-  with open('county_demographics.json') as demographics_data:
+    with open('county_demographics.json') as demographics_data:
       counties = json.load(demographics_data)
-  states = []
-  for c in counties:
-      if c["State"] not in states:
-          states.append(c["State"])
+    states = []
+    for c in counties:
+        if c["State"] not in states:
+            states.append(c["State"])
             
-  options = ""
-  for s in states:
-      options+=Markup("<option value=\"" + s + "\">" + s + "</option>")
-  return options
+    options = ""
+    for s in states:
+        options+=Markup("<option value=\"" + s + "\">" + s + "</option>")
+    return options
 
 """def fun_fact(state):
     with open('county_demographics.json') as demographics_data:
