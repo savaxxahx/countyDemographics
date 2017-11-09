@@ -8,7 +8,7 @@ app = Flask(__name__) #__name__ = "__main__" if this is the file that was run.  
 
 @app.route("/")
 def render_main():
-    return render_template('page1.html', states = get_state_options(), funFact = fun_Fact(request.args(states))
+    return render_template('page1.html', states = get_state_options(), funFact = fun_Fact(request.args['states'])
 
 
 def get_state_options():
