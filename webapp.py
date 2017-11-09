@@ -13,7 +13,7 @@ def render_main():
 
 @app.route("/answer")
 def render_secondtime():
-    return render_template('page1.html' , states = get_state_options(), funFact = fun_Fact(request.args['states'])
+    return render_template('page1.html' , states = get_state_options(), funFact = fun_fact(request.args['states'])
 
 def get_state_options():
   with open('county_demographics.json') as demographics_data:
@@ -28,7 +28,7 @@ def get_state_options():
       options+=Markup("<option value=\"" + s + "\">" + s + "</option>")
   return options
 
-def fun_Fact(state):
+def fun_fact(state):
   with open('county_demographics.json') as demographics_data:
       counties = json.load(demographics_data)
   first = counties[0]["Miscellaneous"]["Percent Female"]
