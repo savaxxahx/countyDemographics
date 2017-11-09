@@ -12,7 +12,7 @@ def render_main():
                            
 
 @app.route("/answer")
-def render_main():
+def render_secondtime():
     return render_template('page1.html' , states = get_state_options(), funFact = fun_Fact(request.args['states'])
 
 def get_state_options():
