@@ -36,7 +36,7 @@ def fun_fact(state):
       if c["counties"] in state:
          if c["Miscellaneous"]["Percent Female"]> first:
             first =c["Miscellaneous"]["Percent Female"]"""
-    return str(first)                   
+    return str("why")                   
    
     
 
